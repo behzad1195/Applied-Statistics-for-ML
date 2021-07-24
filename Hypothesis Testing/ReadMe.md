@@ -2,11 +2,12 @@
 - Data alone is not interesting alone. Anytime we look at data we are trying to make a coclusion out of it. For instance when you looks at the education and income level you want to find out whether people with higher education earn higher income or not. In statistics we call it hypothesis testing in other words we want to test our assumption (hypothesis) by looking at the data that we have.
 - Each time that we come up with one assumption as easy as the shape of our distribution or correlation we should test our assumption. This class of methods is called Statistical hypothesis testing, or significance tests. In statistics we test a hypothesis with looking at the quantitave value against the given data. The result of the test tell us whether our assumption is correct or not.
 #### Two examples of hypothesis tests in ML
-    - Normal Distribution: make sure that our data follows the normal distribution or at least it's close to it -> That's the reason that we normalized/standardized our data before fitting it into the model. But if we our data is not similar to normal distribution we should use power transform methods to make them normal.
-    - Same population: make sure that our samples are drawn from the same population 
+* Normal Distribution: make sure that our data follows the normal distribution or at least it's close to it -> That's the reason that we normalized/standardized our data before fitting it into the model. But if we our data is not similar to normal distribution we should use power transform methods to make them normal.
+* Same population: make sure that our samples are drawn from the same population 
+
 #### The Null Hypothesis(H0)
-    - The assumption of statistical test is called the Null Hypothesis AKA H0 or defualt assumption.
-    - H1 AKA alternative hypothesis is the violation of H0, meaning that if we can't prove the H0 then H1 is correct.  
+* The assumption of statistical test is called the Null Hypothesis AKA H0 or defualt assumption.
+* H1 AKA alternative hypothesis is the violation of H0, meaning that if we can't prove the H0 then H1 is correct.  
 
 ### Defining P-Value
 - The result of a statistical hypothesis test must be interpreted for us to start making claims. There are two common forms that our results from the hypothesis can take and it must be interpreted in different ways. They are P-VALUE (the most common) and CRITICAL VALUE.
