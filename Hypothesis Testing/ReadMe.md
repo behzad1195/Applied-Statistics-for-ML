@@ -1,8 +1,9 @@
 ### Intro
-- Data alone is not interesting alone. Anytime we look at data we are trying to make a coclusion out of it. For instance when you looks at the education and income level you want to find out whether people with higher education earn higher income or not. In statistics we call it hypothesis testing in other words we want to test our assumption (hypothesis) by looking at the data that we have.
+- Data alone is not interesting. Anytime we look at data we are trying to make a conclusion out of it. For instance when you looks at the education and income level you want to find out whether people with higher education earn higher income or not. In statistics we call it hypothesis testing in other words we want to test our assumption (hypothesis) by looking at the data that we have.
 - Each time that we come up with one assumption as easy as the shape of our distribution or correlation we should test our assumption. This class of methods is called Statistical hypothesis testing, or significance tests. In statistics we test a hypothesis with looking at the quantitave value against the given data. The result of the test tell us whether our assumption is correct or not.
+
 #### Two examples of hypothesis tests in ML
-* Normal Distribution: make sure that our data follows the normal distribution or at least it's close to it -> That's the reason that we normalized/standardized our data before fitting it into the model. But if we our data is not similar to normal distribution we should use power transform methods to make them normal.
+* Normal Distribution: make sure that our data follows the normal distribution or at least it's close to it -> That's the reason that we normalized/standardized our data before fitting it into the model. But if our data is not similar to normal distribution we should use power transform methods to make them normal.
 * Same population: make sure that our samples are drawn from the same population 
 
 #### The Null Hypothesis(H0)
@@ -13,16 +14,16 @@
 - The result of a statistical hypothesis test must be interpreted for us to start making claims. There are two common forms that our results from the hypothesis can take and it must be interpreted in different ways. They are P-VALUE (the most common) and CRITICAL VALUE.
     - P-VALUE: This is a quantity that we can use to interpret or quantify the result of the test and either reject or fail to reject the H0. This is done by comparing P-VALUE with a given threshold or our significance level (it can be different from one project to another but the most common significance level is 95% or 0.95 followeed by 90% (0.9) and 99%(0.99)). Another way to explain is that for instance the probabilty of 99 heads in 100 flips is realtively small. The probability is called the P-VALUE.   
 
-### Reject or Faill H0
+### Reject or Faill to Reject the H0
 - Reject: rejecting the H0 is one of two possible outcome of a hypothesis test. The H0 states that there is no STATISTICALY SIGNIFICANT change. Rejecting the H0 means that you conclude that there IS a statistically significant change.  
 - For exampple let's assume that a man want to propose to a women, and the women says that I reject the HO this means the she actually accepted his propose. Because before asking they were only friend yet after accepting they become engaged which is a big change -> There is a STATISTICALY SIGNIFICANT change in their relationship and hence rejecting the H0. 
-- But if she says No then she failed to reject H0 which means that there is no STATISTICALY SIGNIFICANT change in their relationship and they remain friends which in my humble opinion in any case (yes or no) there would be a huge change in their relationship ;). But you get what these statisticians mean by this example.
+- But if she says No then she failed to reject H0 which means that there is no STATISTICALY SIGNIFICANT change in their relationship and they remain friends which in my humble opinion in any case (yes or no) there would be a huge change in their relationship 😉. But you get what these statisticians mean by this example.
 
 ### Errors in Hypothesis Testing:
 - In general there are two types of error in hypothesis testing namely, "Type I errors" and "Type II errors".
     - Type I errors: It's when you reject a True H0 -> False Positive (most serious error also known as alpha -> because the responsibility of choosing alpha is on you) -> in ML Type I error is same with PRECISION
     - Type II erros: It's when you accept (fail to reject) a False H0 -> False Negative (smaller probelm because it's not your fault. However if you chose your alpha wrong then it's somehow your problem as well but at job most of the time they tell you which kind of significance level they are looking for). -> in ML Type II error is same with RECALL
-    - A kind of similar example is that assume a boy assumption is that a girl likes him but he's not sure whether to ask her out or not. So the H0 is that She likes him back. If the Truth is also that She likes HIM back then if he doesn't ask her out then its Type I error (reject the True H0, False Positive). But if she doesn't like Him back and he asks her anyway then it's Type II error (Fail to reject(accept) the H0, False Negative).
+    - A kind of similar example is that assume a boy assumption is that a girl likes him but he's not sure whether to ask her out or not. So the H0 is that She likes him back. If the Truth is also that She likes HIM back then if he doesn't ask her out then it's Type I error (reject the True H0, False Positive). But if she doesn't like Him back and he asks her anyway then it's Type II error (Fail to reject(accept) the H0, False Negative).
 
 ### Statistical Distributions:
 - Any sample of data has a form of distribution and as you know by now the most common one is the normal(Guassian) distribution. This distribution describe the groupping or density of observation which is called Probability Density Function(PDF). You can think of a distribution as a function that describes the relationship between observations and sample space. For example you may be interested in the age of humans with the individual age as observations in a domain and a age between 0 and 115 represeant a sample space. A DISTRIBUTION is a mathematical function that shows the realtionship between observations (individuall ages) and sample space (0 to 115). The mean, median, mode, Variance, STD, and etc. are all among the types of relationship you can find within a distribution. 
@@ -139,12 +140,3 @@
 - A power analysis involves estimating one of these four parameters given values for three other parameters. For instance statistical power can be calculated given the sample size, the effect size and the significance level. 
     - The most common practice in designing experiment is finding the minimum sample size. As a data scientist you can set the other three parameters by your own judgment together with the help of experts with the domain knwoledge (can be people from other departments e.g. sales, HR, Finance, etc.). As a practitioner, you can start with sensible defaults for some parameters, such as significance level of 0.05 and a power level of 0.80. 
     * For more notes and python codes -> Applied Statsitics - Student's t-Test Power Analysis.ipynb 
-
-
-
-
-
-
-
-  
-
